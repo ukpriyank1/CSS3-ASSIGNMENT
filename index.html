@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path</title>
+
+    <!-- CSS Start -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body {
+            background-color: rgb( 150, 105, 102, 0.5);
+        }
+
+     .head {
+        width: 100%;
+        height: 35em;
+        clip-path: polygon(0% 87.35%, 50.02% 100%, 100% 87.35%, 100% 0.99%, 0% 0%);
+        border-bottom: 50% solid #fff;
+        background-image: url('https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg') url('https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_1280.jpg'), url('https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg'), url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg');
+        background-size: 100% 100%;
+        box-shadow: 1px 2px 10px 5px white;
+        animation: slider 12s infinite linear;
+        clip-path: polygon( 50, 101 101, 33 1,32);
+     }
+
+     @keyframes slider {
+        0% { background-image: url('https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg')}
+        25% { background-image: url('https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_1280.jpg')}
+        50% { background-image: url('https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg')}
+        75% { background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg')}
+     }
+
+     .nav {
+        display: flex;
+        flex-direction: row;
+     }
+
+     .nav-lft {
+      margin-top: 30px;
+     }
+
+     .logo {
+        margin: 0 270px 0 220px;
+        padding: 0%;
+        border: 2px solid #fff;
+        font-size: 5vmin;
+     }
+
+     .nav-lft::first-letter {
+      padding: 0.1% 1%;
+      background-color: #fff;
+      padding-left: 5px; 
+     }
+
+     .nav-rgt {
+        margin: 30px 30px 0 0;
+        list-style: none;
+     }
+
+     .nav-rgt a {
+        margin-right: 30px;
+        color: #fff;
+        font-size: 12px;
+     }
+
+     .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+     }
+
+     .content h3 {
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 10px;
+        font-weight: 100;
+        margin-right: 170px;
+     }
+
+     .content h1 {
+        font-size: 45px;
+        color: #fff;
+        margin-bottom: 50px;
+        margin-left: -20px;
+     }
+
+     .content p {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+        font-weight: 100;
+        margin-left: -20px;
+     }
+
+     .btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+     }
+
+     .btn1 button {
+        padding: 15px 30px;
+        background-color: #FF4E00;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+        margin: 0 25px 0 -20px;
+     }
+
+     .btn1 button:hover {
+        background-color: transparent;
+        border: 1px solid #fff;
+     }
+
+     .btn2 button {
+        padding: 14.5px 50px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        font-weight: bold;
+     }
+
+     .btn2 button:hover {
+        background-color: #FF4E00;
+        border: none;
+     }
+
+     .main {
+        width: 100%;
+        height: 400px;  
+        display: flex;  
+        flex-direction: row;
+    }
+
+     .triangle {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #FF4E00;
+        margin: 100px 0 0 230px;
+        text-align: center;
+        transform: rotate(47deg);
+        transition: 3s ease-in;
+     }
+
+     .triangle:hover {
+      transform: scale(1.4) ;
+      /* transform: skewx(10deg ); */
+      background-color: gray;
+      border: 2px solid #fff;
+     }
+   
+
+     .triangle img {
+        transform: rotate(314deg);
+        display: flex;
+        position: absolute;
+        top: 14%;
+        left: 12%;
+        transition: 3s ease-in;
+     }
+
+     .triangle img:hover {
+        transform: rotate(0deg);
+     }
+
+     .squre {
+        width: 70px;
+        height: 70px;
+        border: 2px solid grey;
+        margin: 100px 0 0 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 3s ease-in;
+     }
+
+     .squre:hover {
+      /* transform: rotate(-47deg); */
+      /* transform:  skew(10deg ); */
+      transform: scale(1.4);
+      background-color: gray;
+      border: 2px solid #fff;
+     }
+
+     .squre img {
+        display: flex;
+        position: absolute;
+        margin: auto;
+        transition: 3s ease-in;
+     }
+
+    .squre img:hover {
+        transform: rotate(360deg);
+     }
+
+     h3 {
+         margin-bottom: 170px;
+         margin-left: -100px;
+         display: flex;
+         flex-direction: column;
+         align-self: flex-end;
+         /* color: #fff; */
+     }
+
+     .main-cont {
+        display: flex;
+        justify-content: center;
+        padding: 0 90px 150px 150px;
+        align-items: flex-start;
+     }
+
+     .content1 p {
+        text-align: center;
+        font-size: 12px;
+        margin: -140px 15px 0 0;
+     }
+
+     .content2 p {
+        text-align: center;
+        font-size: 12px;
+        margin: -140px 10px 0 10px;
+     }
+
+     .content3 p {
+        text-align: center;
+        font-size: 12px;
+        margin: -140px 25px 0 10px;
+     }
+
+     .content4 p {
+        text-align: center;
+        font-size: 12px;
+        margin: -140px 25px 0 0px;
+     }
+
+     .line {
+      width: 45px;
+      height: 1px;
+      background-color: #FF4E00;
+      margin: -150px 0 160px 95px;
+      display: flex;
+      align-items: flex-start;
+      align-self: flex-start;
+   }
+
+    </style>
+
+    <!-- CSS End -->
+
+</head>
+<body>
+
+   <!-- header Start -->
+
+   <div class="header">
+      <div class="head">
+         <div class="nav">
+
+            <div class="nav-lft">
+                 <span class="logo">Logo</span>
+            </div>
+            <div class="nav-rgt">
+                 
+                    <a href="#" class="home">HOME</a>
+                    <a>ABOUT US</a>
+                    <a>PORTFOLIO</a>
+                    <a>PRICING</a>
+                    <a>TEAM</a>
+                    <a>BLOG</a>
+                    <a>CONTACT</a>
+                
+            </div>
+
+            <div class="content">
+
+            <h3>Our Clients Are Our First Priority</h3>
+            <h1>WELCOME TO SKY</h1>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero animi <br> assumenda tempore voluptates, nulla sit, quasi consectetur dolorem itaque quibusdam <br> quam molestias reiciendis recusandae pariatur consequatur illo beatae quidem?</P>
+
+            <div class="btn">
+                <div class="btn1">
+                    <button>GET STARTED NOW</button>
+                </div>
+                <div class="btn2">
+                    <button>LEARN MORE</button>
+                </div>
+            </div>
+
+         </div>
+
+      </div>
+</div>
+
+   <!-- header End -->
+
+
+   <!-- Main Section Start -->
+
+    <div class="main">
+        <div class="triangle">
+            <img src="eyeglasses (1).png" width="50px" alt="">
+        </div>
+        <h3>SLEEK DESIGN</h3> 
+    
+
+        <div class="squre">
+            <img src="heart.png" width="30px" alt="">
+        </div>
+        <h3>CLEAN CODE</h3>
+        
+
+        <div class="squre">
+            <img src="idea.png" width="30px" alt="">
+        </div>
+        <h3>CREAT IDEAS</h3>
+        
+
+        <div class="squre">
+            <img src="chat.png" width="30px" alt="">
+        </div>
+        <h3>FREE SUPPORT</h3>
+    </div>
+
+   <!-- Main Section End -->
+
+   <!-- Main Section Content Start -->
+
+    <div class="main-cont">
+      
+        <div class="content1">
+         <div class="line"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum illum minus in corrupti.</p>
+        </div>
+
+        <div class="content2">
+         <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum illum minus in corrupti.</p>
+        </div>
+
+        <div class="content3">
+         <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum illum minus in corrupti.</p>
+        </div>
+
+         <div class="content4">
+         <div class="line"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum illum minus in corrupti.</p>
+        </div>
+
+    </div>
+
+   <!-- Main Section Content End -->
+
+    
+</body>
+</html>
