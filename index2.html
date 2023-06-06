@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          background: #000100;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2% auto;
+            display: grid;
+            grid-auto-rows: 270px;
+            gap: 10px;
+        }
+
+        .box {
+          background-color: #222;
+          background-position: top;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          background-blend-mode: hard-light;
+          border: 3px solid #fff;
+          transition: 1s ease-in-out;
+        }
+
+       .box:hover {
+            background-color: #999;
+            background-position: bottom;
+        } 
+
+        .boxa {
+          display: grid;
+          grid-template-columns: 33% 33% 33%;
+          gap: 10px;
+        }
+
+        .boxb {
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
+          gap: 10px;
+        }
+
+       .boxc {
+          display: grid;
+          grid-template-columns: repeat(3,33%);
+          gap: 10px;
+        }
+
+        .boxd {
+          display: grid;
+          grid-template-columns: 65% 35%;
+          gap: 10px;
+        }
+
+        .box1 {
+           background-image: url('https://images.unsplash.com/photo-1491146179969-d674118945ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-size: 120%;
+        }
+
+        .box2 {
+           background-image: url('https://images.unsplash.com/photo-1446292532430-3e76f6ab6444?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=932&q=80');
+           background-size: cover;
+           background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box3 {
+          background-image: url('https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=600');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box4 {
+          background-image: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box5 {
+          background-image: url('https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box6 {
+          background-image: url('https://cdn.pixabay.com/photo/2015/11/07/19/18/aurora-borealis-1032517_1280.jpg');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box7 {
+          background-image: url('https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box8 {
+          background-image: url('https://images.pexels.com/photos/2171277/pexels-photo-2171277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+          background-size: cover;
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box9 {
+          background-image: url('https://cdn.pixabay.com/photo/2016/03/31/14/44/etretat-1292799_1280.jpg');
+          background-size: 150%;
+          background-repeat: no-repeat;
+        }
+
+        .box10 {
+          background-image: url('https://cdn.pixabay.com/photo/2017/08/16/01/23/desert-2646209_1280.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-size: 190%;
+        }
+
+        @media screen and (max-width:1024px){
+         
+             .container {
+              width: 100%;
+              grid-auto-rows: 500px;
+            }
+
+            .boxr {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+            }
+
+            .box {
+              height: 250px;
+              width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div class="container">
+
+        <div class="boxd boxr">
+           <div class="box box1">box1</div>
+           <div class="box box2">box2</div>
+        </div>
+
+        <div class="boxa boxr">
+            <div class="box box3">box3</div>
+            <div class="box box4">box4</div>
+            <div class="box box5">box5</div>
+        </div>
+
+        <div class="boxb boxr">
+            <div class="box box6">box6</div>
+            <div class="box box7">box7</div>
+        </div>
+
+        <div class="boxc boxr">
+            <div class="box box8">box8</div>
+            <div class="box box9">box9</div>
+            <div class="box box10">box10</div>
+        </div>
+
+      </div>
+</body>
+</html>
