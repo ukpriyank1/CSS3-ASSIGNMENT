@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css wave generator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back {
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            background: url("https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 7% 0 0 0;
+            line-height: 35px;
+            position: relative;
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: row;
+            margin-top: 1%;
+            margin-left: 1.5%;
+            position: absolute;   
+            top: 37%;
+        }
+
+
+        .content {
+            position: absolute;
+            top: 25%;
+            text-align: center;
+        }
+
+        .line-1 {
+            width: 70px;
+            height: 1px;
+            background-color: #fff;
+            margin: 3px 10px 0 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: orangered;
+            margin-right: 10px;
+
+        }
+
+        .line-2 {
+            width: 70px;
+            height: 1px;
+            background-color: #fff;
+            margin: 3px 10px 0 0;
+        }
+
+        .first {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: url("/1.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid green;
+            position: absolute;
+            top: 24.3rem;
+            left: 15rem;
+        }
+
+        .second {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: url("/ladie-client.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid green;
+            position: absolute;
+            top: 23.5rem;
+            left: 30rem;
+        }
+
+        .third {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: url("/3.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid green;
+            position: absolute;
+            top: 32.5rem;
+            left: 50rem;
+
+        }
+
+        .fourth {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: url("/man-client-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid green;
+            position: absolute;
+            top: 32.3rem;
+            left: 60rem;
+
+        }
+
+        .five {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            background: url("/2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 2px solid green;
+            position: absolute;
+            top: 25rem;
+            left: 70rem;
+
+        }
+
+        .line {
+            height: 25px;
+            border-left: 1px solid lightgreen;
+            position: absolute;
+            top: 70%;
+            left: 39.5%;
+        }
+
+        h3 {
+            color: green;
+            text-align: center;
+            position: absolute;
+            left: 34%;
+            top: 75%;
+        }
+
+        h4 {
+            font-size: 13px;
+            font-weight: 100;
+            text-align: center;
+            position: absolute;
+            left: 36.5%;
+            top: 80%;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="back">
+        <div class="content">
+          <h2>OUR TEAM</h2>
+          <p>Meet the craziest team. Share your thaught with them.</p>
+        </div>
+
+    <div class="cont">
+        <div class="line-1"></div>
+        <div class="dot"></div>
+        <div class="line-2"></div>
+    </div>
+
+        <div class="lal" style="height: 560px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-139.79,199.02 C307.71,-87.97 263.96,296.02 501.45,41.01 L502.08,157.02 L-12.29,181.02 Z" style=" stroke: green; stroke-width: 1; fill: #023020;  border: 2px solid orangered;"></path></svg>
+        </div>
+
+        <div class="person">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+            <div class="line"></div>
+            <h3>WEB DESIGNER</h3>
+            <h4>UI/UX Designer</h4>
+            <div class="fourth"></div>
+            <div class="five"></div>
+        </div>
+
+    </div>
+   
+       
+   
+    
+</body>
+</html>
